@@ -1,0 +1,35 @@
+.page-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.form-container{
+    background-color: #FCFCFD;
+    padding-inline: 72px;
+    padding-block: 48px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 540px;
+}
+
+.form{
+    display: grid;
+    gap: 2rem;
+}
+
+.form__title{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #101828;
+}
+
+.form__controls{
+    display: grid;
+    gap: 24px;
+}
+.form__footer{
+    padding-top: 1.5rem;
+}

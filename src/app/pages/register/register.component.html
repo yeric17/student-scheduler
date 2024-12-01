@@ -1,0 +1,21 @@
+<main class="page-container">
+    <article class="form-container">
+        <form class="form">
+            <h1 class="form__title">Crear una cuenta</h1>
+            <div class="form__controls">
+                <app-field-text placeholder="balamia@gmail.com">
+                    Correo electrónico
+                </app-field-text>
+                <app-field-text placeholder="Ingrese su contraseña">
+                    Contraseña
+                </app-field-text>
+            </div>
+            <app-button [full]="true">
+                Crear cuenta
+            </app-button>
+        </form>
+        <div class="form__footer">
+            <p>¿Ya tienes una cuenta? <a href="/login">Inicia sesión</a></p>
+        </div>
+    </article>
+</main>
