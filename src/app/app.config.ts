@@ -4,6 +4,7 @@ import { provideRouter, withComponentInputBinding, withViewTransitions } from '@
 import { routes } from './app.routes';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { authInterceptor } from './interceptors/auth/auth.interceptor';
+import { enrolledGuard } from './guards/enrolled/enrolled.guard';
 
 export const appConfig: ApplicationConfig = {
   providers: [

@@ -1,16 +1,27 @@
 <main class="page-container">
     <article class="form-container">
-        <form class="form">
+        <form class="form" (submit)="Register($event)">
             <h1 class="form__title">Crear una cuenta</h1>
             <div class="form__controls">
-                <app-field-text placeholder="balamia@gmail.com">
+                <app-field-text placeholder="balamia@gmail.com" type="email" [(value)]="email">
                     Correo electrónico
                 </app-field-text>
-                <app-field-text placeholder="Ingrese su contraseña">
+                <app-field-text placeholder="" [(value)]="firstName">
+                    Nombres
+                </app-field-text>
+                <app-field-text placeholder="" [(value)]="lastName">
+                    Appellidos
+                </app-field-text>
+                <app-field-text placeholder="Ingrese su contraseña" type="password" [(value)]="password">
                     Contraseña
                 </app-field-text>
             </div>
-            <app-button [full]="true">
+            @if(errorMessage !== ''){
+                <app-error-label class="form__error">
+                    {{errorMessage}}
+                </app-error-label>
+            }
+            <app-button [full]="true" type="submit">
                 Crear cuenta
             </app-button>
         </form>

@@ -28,6 +28,10 @@ export class UserService {
       )
   }
 
+  public Register(email: string, password: string, firstName: string, lastName: string) {
+    return this.httpClient.post(`${this.apiUrl}/account/register`, { email, password, firstName, lastName })
+  }
+
   public async IsAuthenticated() {
     const me = await firstValueFrom(this.GetMe().pipe(catchError(() => of(null))));
     return me !== null;

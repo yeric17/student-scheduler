@@ -67,3 +67,26 @@
     border-top: 1px solid #e0e0e0;
     margin-block: 1rem;
 }
+
+.button--logout{
+    background-color: #f0f0f0;
+    color: #333;
+    padding-inline: 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding-inline: .5rem;
+
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    height: 28px;
+    border: none;
+}
+
+.actions{
+    padding-inline: 1rem;
+    cursor: pointer;
+}

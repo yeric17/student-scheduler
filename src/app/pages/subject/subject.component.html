@@ -1,0 +1,25 @@
+<section class="page-container">
+    <header>
+
+        <img class="page__banner" src="assets/{{subject?.image}}" alt="{{subject?.subjectName}}"/>
+
+        <div class="page__title-group">
+            <h1 class="page__title">{{subject?.subjectName}}</h1>
+            <p class="page__teacher">{{subject?.teacherName}}</p>
+        </div>
+    </header>
+    <div class="page__body">
+        <h2 class="page__subtitle">Estudiantes: {{subject?.studentsCount}}</h2>
+        <ul class="page__student-list">
+            @for(student of subject?.students; track student.userId){
+                <li class="page__student">
+                    <p class="page__student-name">{{student.fullName}}</p>
+                </li>
+            }
+        </ul>
+    </div>
+    <footer>
+        <app-button (click)="Cancelar()" variant="secondary">Cancelar suscripción</app-button>
+    </footer>
+</section>
+

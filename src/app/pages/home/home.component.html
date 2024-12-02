@@ -1,10 +1,10 @@
 
-<section>
-    <h1>Materias</h1>
-    <p>Aquí se mostrarán las materias que tienes disponebles en el sistema.</p>
-    <div>
+<section class="page-container">
+    <h1 class="page-title">Materias disponibles</h1>
+    <p class="page-description">Aquí estan las materias que tiene disponeble en el sistema, de las cuales solo puede inscribir 3.</p>
+    <div class="subject-list">
         @for(subject of subjects(); track subject.subjectAssignmentId){
-            <app-subject-card [subject]="subject"></app-subject-card>
+            <app-subject-card [subject]="subject" (OnEnroll)="GoMySubjects()" (OnCancel)="CancelSubject()"></app-subject-card>
         }
             
     </div>

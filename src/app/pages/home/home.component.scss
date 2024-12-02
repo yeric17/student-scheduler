@@ -1,0 +1,14 @@
+.subject-list{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+}
+
+.page-title{
+    margin-bottom: 1.5rem;
+    font-size: 24px;
+}
+.page-description {
+    margin-bottom: 2rem;
+}

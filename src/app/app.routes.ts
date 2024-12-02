@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { authGuard } from './guards/auth/auth.guard';
+import { enrolledGuard } from './guards/enrolled/enrolled.guard';
 
 export const routes: Routes = [
     {
@@ -17,6 +18,15 @@ export const routes: Routes = [
             {
                 path: '',
                 loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent),
+            },
+            {
+                path: 'my-subjects',
+                loadComponent: () => import('./pages/my-subjects/my-subjects.component').then(m => m.MySubjectsComponent),
+            },
+            {
+                path: 'subject/:id',
+                loadComponent: () => import('./pages/subject/subject.component').then(m => m.SubjectComponent),
+                canActivate: [enrolledGuard]
             }
         ],
         canActivate: [authGuard]

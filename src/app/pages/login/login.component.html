@@ -10,6 +10,11 @@
                     Contraseña
                 </app-field-text>
             </div>
+            @if(errorMessage !== ''){
+                <app-error-label class="form__error">
+                    {{errorMessage}}
+                </app-error-label>
+            }
             <app-button [full]="true" type="submit">
                 Ingresar
             </app-button>

@@ -4,6 +4,7 @@ import { ButtonComponent } from '../../components/buttons/button/button.componen
 import { UserService } from '../../services/user/user.service';
 import { environment } from '../../../environments/environment';
 import { Router } from '@angular/router';
+import { ErrorLabelComponent } from '../../components/forms/error-label/error-label.component';
 
 
 
@@ -11,7 +12,8 @@ import { Router } from '@angular/router';
   selector: 'app-login',
   imports: [
     FieldTextComponent,
-    ButtonComponent
+    ButtonComponent,
+    ErrorLabelComponent
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
@@ -26,6 +28,8 @@ export class LoginComponent {
 
   protected email:string = '';
   protected password:string = '';
+
+  protected errorMessage:string = '';
   
   Login(event:Event){
     event.preventDefault()
@@ -42,7 +46,8 @@ export class LoginComponent {
         this.router.navigate([''])
       },
       error: (error) => {
-        
+        if(error.status === 401) this.errorMessage = 'Usuario o contraseña incorrectos';
+        else this.errorMessage = 'An error occurred';
       }
     });
   }

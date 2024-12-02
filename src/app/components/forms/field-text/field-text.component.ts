@@ -9,7 +9,7 @@ import { ErrorLabelComponent } from '../error-label/error-label.component';
   styleUrl: './field-text.component.scss'
 })
 export class FieldTextComponent {
-  type = input<'text'|'password'>('text');
+  type = input<'text'|'password'|'email'>('text');
   placeholder = input<string>('');
   value = model<string>('');
   required = input<boolean>(true);

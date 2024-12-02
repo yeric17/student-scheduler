@@ -1,0 +1,18 @@
+<article class="notification {{notificationModel()?.type}}" >
+    <header class="notification__header">
+        <h3 class="notification__title">
+            @if(notificationModel()?.type === 'success'){
+                ¡Felicidades!
+            }
+            @if(notificationModel()?.type === 'error'){
+                ¡Error!
+            }
+            @if(notificationModel()?.type === 'warning'){
+                ¡Cuidado!
+            }
+        </h3>
+    </header>
+    <div class="notification__body">
+        <p>{{notificationModel()?.message}}</p>
+    </div>
+</article>

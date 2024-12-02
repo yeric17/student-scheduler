@@ -10,4 +10,5 @@ import { Component, input } from '@angular/core';
 export class ButtonComponent {
   type = input<string>('button');
   full = input<boolean>(false);
+  variant = input<'primary'|'secondary'>('primary');
 }

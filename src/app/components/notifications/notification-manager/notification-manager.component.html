@@ -1,0 +1,5 @@
+<div class="notifications-container">
+    @for(notification of notifications(); track $index){
+        <app-notification-modal [notificationModel]="notification"></app-notification-modal>
+    }
+</div>
