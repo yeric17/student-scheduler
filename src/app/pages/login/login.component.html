@@ -1,16 +1,16 @@
 <main class="page-container">
     <article class="form-container">
-        <form class="form">
+        <form class="form" (submit)="Login($event)">
             <h1 class="form__title">Ingresar con una cuenta</h1>
             <div class="form__controls">
-                <app-field-text placeholder="balamia@gmail.com">
+                <app-field-text placeholder="balamia@gmail.com" [(value)]="email">
                     Correo electrónico
                 </app-field-text>
-                <app-field-text placeholder="Ingrese su contraseña">
+                <app-field-text placeholder="Ingrese su contraseña" [(value)]="password" type="password">
                     Contraseña
                 </app-field-text>
             </div>
-            <app-button [full]="true">
+            <app-button [full]="true" type="submit">
                 Ingresar
             </app-button>
         </form>

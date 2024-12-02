@@ -10,9 +10,21 @@
     background-color: #FCFCFD;
     padding-inline: 72px;
     padding-block: 48px;
-    border-radius: 20px;
     width: 100%;
     max-width: 540px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media screen and (min-width: 540px){
+    .form-container{
+        border-radius: 20px;
+        display: block;
+        height: auto;
+    }
 }
 
 .form{

@@ -1,0 +1,35 @@
+<div class="nav-container">
+    <button class="nav__button" (click)="OpenMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+            <path fill-rule="evenodd" d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Zm0 5.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+        </svg>          
+    </button>
+    <nav class="nav" [ngClass]="{active:isActiveMenu}">
+        <header class="nav__header">
+            <div class="nav__logo">
+                <app-app-logo></app-app-logo>
+                <span>Student Scheduler</span>
+            </div>
+            <button class="nav__button" (click)="CloseMenu()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                    <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
+                </svg>                  
+            </button>
+        </header>
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a href="/app" class="nav__link">Inicio</a>
+            </li>
+            <li class="nav__item">
+                <a href="/inscriptions" class="nav__link">Mis inscripciones</a>
+            </li>
+            <li class="nav__item--divisor"></li>
+            <li class="nav__item">
+                <a href="/profile" class="nav__link">Mi perfil</a>
+            </li>
+            <li class="nav__item">
+                <button type="button" (click)="Logout()">Cerrar sesión</button>
+            </li>
+        </ul>
+    </nav>
+</div>

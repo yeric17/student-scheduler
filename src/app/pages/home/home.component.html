@@ -1,1 +1,11 @@
-<p>home works!</p>
+
+<section>
+    <h1>Materias</h1>
+    <p>Aquí se mostrarán las materias que tienes disponebles en el sistema.</p>
+    <div>
+        @for(subject of subjects(); track subject.subjectAssignmentId){
+            <app-subject-card [subject]="subject"></app-subject-card>
+        }
+            
+    </div>
+</section>

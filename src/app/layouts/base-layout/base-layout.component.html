@@ -1,2 +1,11 @@
-<p>base-layout works!</p>
-<router-outlet></router-outlet>
+<div class="app-container">
+    <header class="header">
+        <app-navbar></app-navbar>
+        <span class="avatar">
+            {{user()?.firstName}} {{user()?.lastName}}
+        </span>
+    </header>
+    <main>
+        <router-outlet></router-outlet>
+    </main>
+</div>

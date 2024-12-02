@@ -2,5 +2,8 @@
     <span class="field-text__label">
         <ng-content></ng-content>
     </span>
-    <input type="{{type()}}" placeholder="{{placeholder()}}" class="field-text__input">
+    <input type="{{type()}}" placeholder="{{placeholder()}}" class="field-text__input" [(ngModel)]="value" [disabled]="disabled()">
+    @if(!isValid){
+        <app-error-label>{{errorMessage}}</app-error-label>
+    }
 </label>

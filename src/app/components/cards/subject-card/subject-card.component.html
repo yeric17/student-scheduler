@@ -1,0 +1,14 @@
+<article class="subject-card">
+    <header class="subject-card__header">
+        <h2>{{ subject().subjectName }}</h2>
+    </header>
+    <div class="subject-card__body">
+        <p>{{ subject().teacherName }}</p>
+    </div>
+    <footer class="subject-card__footer">
+        <a href="/subject/{{ subject().subjectAssignmentId }}">Ver detalles</a>
+        <span>
+            {{subject().studentsCount}}
+        </span>
+    </footer>
+</article>
